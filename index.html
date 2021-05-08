@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIS自主学习网</title>
+    <link rel="stylesheet" href="assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/fonts/iconfont.css">
+    <link rel="stylesheet" href="assets/font/iconfont.css">
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <!-- SEO优化：让logo使用h1标签包裹着，并点击可以回到首页 -->
+            <h1 class="layui-logo">
+                <a href="/home/dashboard.html" target="fm"><img src="assets/images/logo2.png" alt=""><img src="assets/images/login_title2.png" alt=""></a>
+            </h1>
+
+
+            <!-- 头部区域（可配合layui已有的水平导航） -->
+
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item">
+                    <a class="userinfo" href="javascript:;">
+                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> <span class="text-avatar layui-icon layui-icon-username"></span>个人中心
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd><a target="fm" href="/user/user_info.html">基本资料</a></dd>
+                        <dd><a target="fm" href="/user/user.avatar.html">更换头像</a></dd>
+                        <dd><a target="fm" href="/user/user.pwd.html">重置密码</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a id="exit" href="javascript:;"><span class="iconfont icon-tuichu"></span> 退出</a></li>
+            </ul>
+        </div>
+
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <div class="userinfo">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img"><span class="text-avatar layui-icon layui-icon-username"></span><span id="welcome"></span>
+                </div>
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul lay-shrink="all" class="layui-nav layui-nav-tree" lay-filter="test">
+                    <li class="layui-nav-item layui-this"><a href="/home/dashboard.html" target="fm"><span class="iconfont icon-home"></span> 首页</a></li>
+                    <li class="layui-nav-item"><a href="/GIS/gis.college.html" target="fm"><span class="iconfont icon-bangzhushouce"></span></span> GIS著名院校</a></li>
+                    <li class="layui-nav-item"><a href="/GIS/gis.note.html" target="fm"><span class="iconfont icon-Note"></span></span> GIS笔记分享</a></li>
+                    <li class="layui-nav-item"><a href="/GIS/gis.video.html" target="fm"><span class="iconfont icon-video"></span></span> GIS视频资源</a></li>
+                    <li class="layui-nav-item"><a href="/GIS/gis.book.html" target="fm"><span class="iconfont icon-book"></span></span> GIS好书分享</a></li>
+                    <li class="layui-nav-item"><a href="/GIS/gis.data.html" target="fm"><span class="iconfont icon-data"></span></span> GIS常用数据</a></li>
+                    <li class="layui-nav-item"><a href="/GIS/gis.job.html" target="fm"><span class="iconfont icon-zhaopinhui"></span></span>GIS招聘信息</a></li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;"><span class="iconfont icon-lanlvtubiaozhizuomoban-01"></span>webgis演示</a>
+                        <dl class="layui-nav-child">
+                            <dd><a target="fm" href="webgis/tianmap.html"><i class="iconfont icon-line-demonstration"></i>天地图</a></dd>
+                            <dd><a target="fm" href="webgis/baidumap.html"><i class="iconfont icon-line-demonstration"></i>百度地图</a></dd>
+                            <dd><a target="fm" href="webgis/openlayer.html"><i class="iconfont icon-line-demonstration"></i>openlayers</a></dd>
+                        </dl>
+                        <li class="layui-nav-item">
+                            <a href="javascript:;"><span class="iconfont icon-user"></span>个人中心</a>
+                            <dl class="layui-nav-child">
+                                <dd><a target="fm" href="user/user_info.html"><i class="layui-icon layui-icon-app"></i>基本资料</a></dd>
+                                <dd><a target="fm" href="user/user.avatar.html"><i class="layui-icon layui-icon-app"></i>更换头像</a></dd>
+                                <dd><a target="fm" href="user/user.pwd.html"><i class="layui-icon layui-icon-app"></i>修改密码</a></dd>
+                            </dl>
+                        </li>
+                        <li class="layui-nav-item"><a href="/GIS/gis.contribute.html" target="fm"><span class="iconfont icon-email"></span></span> 我要投稿</a></li>
+                        <li class="layui-nav-item"><a href="/GIS/gis.advice.html" target="fm"><span class="iconfont icon-email"></span></span> 给我们的信</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layui-body">
+            <!-- 内容主体区域 -->
+
+            <iframe name="fm" src="/home/dashboard.html" frameborder="0"></iframe>
+            <!-- 开发后面的页面的时候改的 一会记得删掉 -->
+            <!-- <iframe name="fm" src="GIS/gis.advice.html" frameborder="0"></iframe> -->
+
+        </div>
+
+        <div class="layui-footer">
+            <!-- 底部固定区域 -->
+            http://haohaoxuexi.com - GIS自主学习网
+        </div>
+    </div>
+
+</body>
+<script src="assets/lib/layui/layui.all.js"></script>
+<script src="assets/lib/jquery.js"></script>
+<script src="assets/js/baseAPI.js"></script>
+<script src="assets/js/index.js"></script>
+
+
+</html>

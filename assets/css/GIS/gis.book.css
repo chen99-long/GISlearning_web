@@ -1,0 +1,149 @@
+ html,
+ body {
+     padding: 0;
+     margin: 0;
+ }
+ 
+ * {
+     box-sizing: border-box;
+ }
+ 
+ a {
+     text-decoration: none;
+ }
+ 
+ body {
+     background-color: #f2f3f5;
+     padding: 15px;
+ }
+ 
+ .layui-card-body {
+     overflow: hidden;
+ }
+ 
+ .layui-input {
+     display: inline-block;
+     width: 500px;
+ }
+ /* 单个笔记 */
+ 
+ .notes .archiveItem {
+     /* 大框架 */
+     width: 33.333333%;
+     overflow: hidden;
+     position: relative;
+     float: left;
+     padding: 15px 0;
+ }
+ 
+ .notes .note {
+     /* 内框架 */
+     position: relative;
+     transition: all .4s;
+     overflow: hidden;
+     width: 96%;
+     height: 360px;
+     margin: 0 auto;
+     background: #fff;
+     border: 1px solid #ddd;
+     -webkit-box-shadow: 1px 1px 4px #ccc;
+     box-shadow: 1px 1px 4px #ccc;
+ }
+ 
+ .notes .archiveItem .note:hover {
+     box-shadow: 2px 2px 2px 2px #ccc;
+ }
+ 
+ .notes .pic {
+     /* 图片区域 */
+     line-height: 188px;
+     text-align: center;
+     width: 100%;
+     height: 188px;
+     position: relative;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+ }
+ 
+ .notes img {
+     transition: all .4s;
+     max-width: 300px;
+     max-height: 180px!important;
+ }
+ 
+ .notes img:hover {
+     transform: scale(1.1);
+ }
+ 
+ .notes .info {
+     display: none;
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 360px;
+     margin: 0 auto;
+     background: #fff;
+     border: 1px solid #ddd;
+     -webkit-box-shadow: 1px 1px 4px #ccc;
+     box-shadow: 1px 1px 4px #ccc;
+     font-size: 18px;
+     font-weight: 500;
+ }
+ 
+ .notes .info a {
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     transform: translateX(-50%);
+     font-size: 20px;
+     font-weight: 700;
+     color: red;
+ }
+ 
+ .notes .h2 {
+     /* h2标题 */
+     display: inline-block;
+     text-align: center;
+     margin: 0 auto;
+     padding: 10px 5px;
+     font-size: 18px;
+     height: 30px;
+     /* line-height: 80px; */
+     /* overflow: hidden; */
+ }
+ 
+ .notes .desc {
+     /* 底部文字 */
+     position: relative;
+     text-align: left;
+     font-size: 14px;
+     height: 100px;
+ }
+ 
+ .notes .postinfo {
+     /* 那一小块灰色的 */
+     height: 22px;
+     line-height: 22px;
+     overflow: hidden;
+     padding: 0 15px;
+     position: absolute;
+     bottom: 20px;
+     border-bottom: 0;
+     font-size: 12px;
+     color: #999;
+ }
+ 
+ .notes p {
+     padding: 15px;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+     height: 46px;
+     overflow: hidden;
+     color: #666;
+     font-size: 13px;
+     line-height: 20px;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+ }

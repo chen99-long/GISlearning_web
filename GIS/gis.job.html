@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../assets/css/GIS/gis.note.css">
+
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">GIS招聘信息</div>
+        <div class="layui-card-body">
+            <!-- -----------------------搜索栏 ------------------------->
+            <div class="search">
+                <input type="text" name="title" required placeholder="搜索职业" autocomplete="off" class="layui-input">
+                <button type="button" class="layui-btn">搜索</button>
+            </div>
+            <!----------------------笔记们-------------------------- -->
+            <div class="notes">
+
+            </div>
+
+            <!-- -----------------分页------------------>
+            <div id="test1"></div>
+        </div>
+    </div>
+</body>
+<!-- 模板引擎 -->
+<script id="tpl" type="text/html">
+    {{each job}}
+    <div class="archiveItem">
+        <div class="note">
+            <div class="pic">
+                <a href={{$value.action}}>
+                    <img src={{$value.img}} alt="">
+                </a>
+            </div>
+            <a class="h2" href={{$value.action}}>
+                {{$value.title}}
+            </a>
+            <div class="desc">
+                <p>{{$value.job}}</p>
+                <div class="postinfo">{{$value.money}}</div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+<script src="../assets/lib/jquery.js"></script>
+<script src="../assets/lib/template-web.js"></script>
+<script src="../assets/lib/layui/layui.all.js"></script>
+<script src="../assets/js/GIS/gis.note.js"></script>
+
+</html>

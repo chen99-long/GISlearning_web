@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">GIS常用数据（这边数据可能有点少哈！因为本人有点懒不爱做实验，以后小陈一定会加倍努力的更新！！满足各位大大对数据的需求！！）</div>
+        <div class="layui-card-body">
+            <!-- 筛选区域 -->
+            <form class="layui-form" action="">
+                <div class="layui-form-item layui-inline">
+                    <select name="status">
+                        <option value="">所有数据</option>
+                        <option value="0">矢量数据</option>
+                        <option value="1">栅格数据</option>
+                      </select>
+                </div>
+            </form>
+            <!-- 列表区域 -->
+            <table class="layui-table">
+                <colgroup>
+                    <col>
+                    <col width="150">
+
+                    <col width="150">
+                    <col width="180">
+
+
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>数据</th>
+                        <th>数据类型</th>
+                        <th>发表时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <!-- 分页区域 -->
+            <div id="text1"></div>
+        </div>
+    </div>
+</body>
+
+
+<!-- 文章列表的模板引擎 -->
+<script id="tpl" type="text/html">
+    {{each data}}
+    <tr>
+        <td>{{$value.name}}</td>
+        <td>{{$value.type}}</td>
+        <td>{{$value.time}}</td>
+        <td>
+            <a href="{{$value.load}}" class="layui-btn layui-btn-danger layui-btn layui-btn-xs btn-delete">下载 </a>
+        </td>
+    </tr>
+    {{/each}}
+</script>
+
+
+
+
+
+<script src="../assets/lib/jquery.js"></script>
+<script src="../assets/lib/layui/layui.all.js"></script>
+<script src="../assets/lib/template-web.js"></script>
+<script src="../assets/js/GIS/gis.data.js"></script>
+
+</html>

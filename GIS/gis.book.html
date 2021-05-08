@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../assets/css/GIS/gis.book.css">
+
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">GIS好书分享</div>
+        <div class="layui-card-body">
+            <!-- -----------------------搜索栏 ------------------------->
+            <div class="search">
+                <input type="text" name="title" required placeholder="搜索书籍" autocomplete="off" class="layui-input">
+                <button type="button" class="layui-btn">搜索</button>
+            </div>
+            <!----------------------笔记们-------------------------- -->
+            <div class="notes">
+
+
+
+            </div>
+
+            <!-- -----------------分页------------------>
+            <div id="test1"></div>
+        </div>
+    </div>
+</body>
+<!-- 模板引擎 -->
+<script id="tpl" type="text/html">
+    {{each book}}
+    <div class="archiveItem">
+        <div class="note">
+            <div class="pic">
+                <em>
+                    <img src="{{$value.img}}" alt="">
+                </em>
+            </div>
+            <em class="h2">
+                {{$value.name}}
+            </em>
+            <div class="desc">
+                <p>{{$value.cause}}</p>
+                <div class="postinfo">{{$value.info}}</div>
+            </div>
+            <div class="info">
+                <div class="layui-card">
+                    <div class="layui-card-header">本书简介</div>
+                    <div class="layui-card-body">
+                        {{$value.cause}}
+                    </div>
+                </div>
+                <a href={{$value.action}}>点此购买本书</a>
+            </div>
+        </div>
+
+
+    </div>
+    {{/each}}
+</script>
+
+<script src="../assets/lib/jquery.js"></script>
+<script src="../assets/lib/template-web.js"></script>
+<script src="../assets/lib/layui/layui.all.js"></script>
+<script src="../assets/js/GIS/gis.book.js"></script>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>前端新人的jQuery视频插件</title>
+  <link rel="stylesheet" href="css/video.css">
+  <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+  <script src="js/video.js"></script>
+</head>
+
+<body>
+  <div class="video_box">
+    <div class="video_title">
+      <h2>视频标题</h2>
+    </div>
+    <div class="video">
+      <a href="javascript:;" class="play">&#xe61d;</a>
+      <video src="https://blz-videos.nosdn.127.net/1/OverWatch/OVR-S03_E03_McCree_REUNION_zhCN_1080P_mb78.mp4" poster=""></video>
+      <div class="controls">
+      <a href="javascript:;" class="switch">&#xe623;</a>
+      <a href="javascript:;" class="enlarge">&#xe63d;</a>
+      <div class="time">
+        <div class="progress">
+          <div class="playprogress">
+            <div class="slider"></div>
+          </div>
+        </div>
+        <div class="timedisplay">
+          <span class="currentTime">00:00</span> / <span class="duration">00:00</span>
+        </div>
+      </div>
+      <div class="speed">
+        <div class="speed_btn">
+          <ul>
+            <li>0.5x</li>
+            <li>0.75x</li>
+            <li>1.0x</li>
+            <li>1.25x</li>
+            <li>1.5x</li>
+            <li>2.0x</li>
+          </ul>
+        </div>
+        <span>倍速</span>
+      </div>
+      <div class="volume">
+        <a href="javascript:;" class="volume_btn">&#xe63e;</a>
+        <input type="range" class="volume_range" min="0" max="100" value="100">
+      </div>
+    </div>
+    </div>
+    
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="天地图" />
+    <title>tianmap</title>
+    <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+    <script type="text/javascript" src="http://api.tianditu.gov.cn/api?v=4.0&tk=9ec48cf10e1c09b1923d22655d5a52eb"></script>
+    <script src="../assets/js/webgis/tianmap.js"></script>
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+        
+        #mapDiv {
+            width: 100%;
+            height: 442px;
+        }
+        
+        p {
+            margin-left: 5px;
+            font-size: 14px;
+        }
+    </style>
+
+</head>
+
+<body onLoad="onLoad()">
+    <div class="layui-card">
+        <div class="layui-card-header"><strong style="margin-right: 50px;">天地图演示</strong> 当前地理坐标：
+            <input type="text" id="lnglatStr" value="" />
+
+        </div>
+        <div class="layui-card-body">
+            <div class="control">
+
+                <p>测距开关</p>
+                <div>
+                    <input class="layui-btn layui-btn-warm" type="button" value="开启" onClick="lineTool.open();" />
+                    <input class="layui-btn layui-btn-danger" type="button" value="关闭" onClick="lineTool.close();" />
+                </div>
+                <p>地图小工具</p>
+                <div>
+                    <input class="layui-btn layui-btn-normal" class="layui-btn layui-btn-normal" type="button" value="点工具" onClick='openMarkerTool()' />
+                    <input class="layui-btn layui-btn-normal" type="button" value="多边形工具" onClick='openPolygonTool()' />
+                    <input class="layui-btn layui-btn-normal" type="button" value="线工具" onClick='openPolylineTool()' />
+                    <input class="layui-btn layui-btn-normal" type="button" value="矩形工具" onClick='openRectangleTool()' />
+                    <input class="layui-btn layui-btn-normal" type="button" value="画圆工具" onClick='openCircleTool()' />
+                    <input class="layui-btn layui-btn-normal" type="button" value="清除所有" onClick='map.clearOverLays()' />
+                </div>
+            </div>
+            <div id="mapDiv"></div>
+        </div>
+    </div>
+
+</body>
+<script src="../assets/lib/layui/layui.all.js"></script>
+
+</html>
