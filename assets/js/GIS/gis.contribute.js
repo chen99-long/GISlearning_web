@@ -68,11 +68,11 @@ $(function() {
                 publishArticle(fd)
                 layer.confirm('确定发布投稿吗？', { icon: 3, title: '提示' }, function(index) {
                     //do something
-                    layer.alert('投稿成功！非常感谢您的投稿，等小陈火速审核后将会立刻为您发表！', { icon: 1 }, function(index) {
-                        //do something
-                        location.href = '../home/dashboard.html'
-                        layer.close(index);
-                    });
+                    // layer.alert('投稿成功！非常感谢您的投稿，等小陈火速审核后将会立刻为您发表！', { icon: 1 }, function(index) {
+                    //do something
+                    location.href = '../home/dashboard.html'
+                        //     layer.close(index);
+                        // });
 
                     layer.close(index);
                 });
