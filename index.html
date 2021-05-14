@@ -47,12 +47,15 @@
                 <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
                 <ul lay-shrink="all" class="layui-nav layui-nav-tree" lay-filter="test">
                     <li class="layui-nav-item layui-this"><a href="/home/dashboard.html" target="fm"><span class="iconfont icon-home"></span> 首页</a></li>
-                    <li class="layui-nav-item"><a href="/GIS/gis.college.html" target="fm"><span class="iconfont icon-bangzhushouce"></span></span> GIS著名院校</a></li>
-                    <li class="layui-nav-item"><a href="/GIS/gis.note.html" target="fm"><span class="iconfont icon-Note"></span></span> GIS笔记分享</a></li>
-                    <li class="layui-nav-item"><a href="/GIS/gis.video.html" target="fm"><span class="iconfont icon-video"></span></span> GIS视频资源</a></li>
-                    <li class="layui-nav-item"><a href="/GIS/gis.book.html" target="fm"><span class="iconfont icon-book"></span></span> GIS好书分享</a></li>
-                    <li class="layui-nav-item"><a href="/GIS/gis.data.html" target="fm"><span class="iconfont icon-data"></span></span> GIS常用数据</a></li>
-                    <li class="layui-nav-item"><a href="/GIS/gis.job.html" target="fm"><span class="iconfont icon-zhaopinhui"></span></span>GIS招聘信息</a></li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;"><span class="iconfont icon-user"></span>学习资源</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="/GIS/gis.video.html" target="fm"><span class="iconfont icon-video"></span></span> GIS视频资源</a></dd>
+                            <dd><a href="/GIS/gis.book.html" target="fm"><span class="iconfont icon-book"></span></span> GIS好书分享</a></dd>
+                            <dd><a href="/GIS/gis.note.html" target="fm"><span class="iconfont icon-Note"></span></span> GIS笔记分享</a></dd>
+                            <dd><a href="/GIS/gis.data.html" target="fm"><span class="iconfont icon-data"></span></span> GIS常用数据</a></dd>
+                        </dl>
+                    </li>
                     <li class="layui-nav-item">
                         <a href="javascript:;"><span class="iconfont icon-lanlvtubiaozhizuomoban-01"></span>webgis演示</a>
                         <dl class="layui-nav-child">
@@ -60,16 +63,29 @@
                             <dd><a target="fm" href="webgis/baidumap.html"><i class="iconfont icon-line-demonstration"></i>百度地图</a></dd>
                             <dd><a target="fm" href="webgis/openlayer.html"><i class="iconfont icon-line-demonstration"></i>openlayers</a></dd>
                         </dl>
-                        <li class="layui-nav-item">
-                            <a href="javascript:;"><span class="iconfont icon-user"></span>个人中心</a>
-                            <dl class="layui-nav-child">
-                                <dd><a target="fm" href="user/user_info.html"><i class="layui-icon layui-icon-app"></i>基本资料</a></dd>
-                                <dd><a target="fm" href="user/user.avatar.html"><i class="layui-icon layui-icon-app"></i>更换头像</a></dd>
-                                <dd><a target="fm" href="user/user.pwd.html"><i class="layui-icon layui-icon-app"></i>修改密码</a></dd>
-                            </dl>
-                        </li>
-                        <li class="layui-nav-item"><a href="/GIS/gis.contribute.html" target="fm"><span class="iconfont icon-email"></span></span> 我要投稿</a></li>
-                        <li class="layui-nav-item"><a href="/GIS/gis.advice.html" target="fm"><span class="iconfont icon-email"></span></span> 给我们的信</a></li>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;"><span class="iconfont icon-user"></span>其他内容</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="/GIS/gis.college.html" target="fm"><span class="iconfont icon-bangzhushouce"></span></span> GIS著名院校</a></dd>
+                            <dd><a href="/GIS/gis.job.html" target="fm"><span class="iconfont icon-zhaopinhui"></span></span>GIS招聘信息</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;"><span class="iconfont icon-user"></span>联系我们</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="/GIS/gis.contribute.html" target="fm"><span class="iconfont icon-email"></span></span> 我要投稿</a></dd>
+                            <dd><a href="/GIS/gis.advice.html" target="fm"><span class="iconfont icon-email"></span></span> 给我们的信</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;"><span class="iconfont icon-user"></span>个人中心</a>
+                        <dl class="layui-nav-child">
+                            <dd><a target="fm" href="user/user_info.html"><i class="layui-icon layui-icon-app"></i>基本资料</a></dd>
+                            <dd><a target="fm" href="user/user.avatar.html"><i class="layui-icon layui-icon-app"></i>更换头像</a></dd>
+                            <dd><a target="fm" href="user/user.pwd.html"><i class="layui-icon layui-icon-app"></i>修改密码</a></dd>
+                        </dl>
+                    </li>
                 </ul>
             </div>
         </div>
