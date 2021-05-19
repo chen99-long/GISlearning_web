@@ -51,6 +51,7 @@ $(function() {
             url: '/api/reguser',
             data: data,
             success: function(res) {
+                console.log(data);
                 if (res.status !== 0) return layer.msg(res.message);
                 layer.msg('注册成功，请登录！');
                 $('#link_login').click(); //自动点击到登录界面

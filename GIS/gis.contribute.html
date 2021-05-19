@@ -30,14 +30,20 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">投稿类目</label>
                     <div class="layui-input-block">
-                        <select name="type" lay-filter="">
+                        <select name="type" lay-filter="" lay-search>
                             <option value="">请选择您想要投稿的类目</option>
-                            <option value="0">GIS著名院校</option>
+                            <optgroup label="学习资源">
                             <option value="1">GIS笔记分享</option>
                             <option value="2">GIS视频资源</option>
                             <option value="3">GIS好书分享</option>
                             <option value="4">GIS常用数据</option>
+                            </optgroup>
+                            <optgroup label="其他内容">
+                             <option value="0">GIS著名院校</option>
+ 
                             <option value="5">GIS招聘信息</option>
+                            </optgroup>
+
                           </select>
                     </div>
                 </div>
