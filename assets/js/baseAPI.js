@@ -7,6 +7,7 @@ $(function() {
         // options.url = 'http://ajax.frontend.itheima.net' + options.url
         // options.url = 'http://api-breakingnews-web.itheima.net' + options.url
         options.url = 'http://localhost:3007' + options.url
+            // options.url = 'http://49.233.254.123:3007' + options.url
 
         // options.url = 'http://api-breakingnews-web.itheima.net' + options.url
 
